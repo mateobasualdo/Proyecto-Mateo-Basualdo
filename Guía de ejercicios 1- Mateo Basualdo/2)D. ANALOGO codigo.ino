@@ -10,8 +10,7 @@ void setup()
 }
 
 void loop() {
-  int valorPotenciometro = analogRead(A0);
-  int tiempo = map(valorPotenciometro, 0, 1023, 100, 1000);
+  int tiempo = map(analogRead(A0), 0, 1023, 100, 1000);
 
   analogWrite(3, 255);  
   analogWrite(6, 0);
