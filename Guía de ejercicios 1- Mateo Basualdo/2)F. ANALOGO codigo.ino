@@ -4,8 +4,7 @@ void setup() {
 }
 
 void loop() {
-  int valorPot = analogRead(A0);
-  int tiempo = map(valorPot, 0, 1023, 0, 10000);
+  int tiempo = map(analogRead(A0), 0, 1023, 0, 10000);
 
   digitalWrite(3, HIGH); 
   delay(tiempo);
