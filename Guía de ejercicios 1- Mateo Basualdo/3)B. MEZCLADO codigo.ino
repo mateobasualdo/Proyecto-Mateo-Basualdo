@@ -21,23 +21,22 @@ void loop()
   }
 
   if (luzPrendida) {
-    int valorPotencio = analogRead(A1);
     int volumenRojo = 0;
     int volumenVerde = 0;
     int volumenAzul = 0;
 
-    if (valorPotencio < 341) {
-      volumenRojo = map(valorPotencio, 0, 340, 0, 255);
+    if (analogRead(A1) < 341) {
+      volumenRojo = map(analogRead(A1), 0, 340, 0, 255);
       volumenVerde = 0;
       volumenAzul = 0;
     } else if (valorPotencio < 682) {
       volumenRojo = 0;
-      volumenVerde = map(valorPotencio, 341, 681, 0, 255);
+      volumenVerde = map(analogRead(A1), 341, 681, 0, 255);
       volumenAzul = 0;
     } else {
       volumenRojo = 0;
       volumenVerde = 0;
-      volumenAzul = map(valorPotencio, 682, 1023, 0, 255);
+      volumenAzul = map(analogRead(A1), 682, 1023, 0, 255);
     }
 
     analogWrite(3,  volumenRojo);
