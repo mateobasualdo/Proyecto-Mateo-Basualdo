@@ -6,7 +6,6 @@ void setup()
 
 void loop() 
 {
-  int volumen = analogRead(A0);
-  int frecuencias = map(volumen, 0, 1023, 100, 1000);
+  int frecuencias = map(analogRead(A0), 0, 1023, 100, 1000);
   tone(3, frecuencias);
 }
