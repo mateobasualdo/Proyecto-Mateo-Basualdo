@@ -1,6 +1,4 @@
 int conteo = 0;
-bool botonEstado = HIGH;
-bool botonPrendido = false;
 
 void setup()
 {
