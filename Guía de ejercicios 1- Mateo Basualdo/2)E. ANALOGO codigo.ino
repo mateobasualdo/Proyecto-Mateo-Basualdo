@@ -8,13 +8,9 @@ void setup() {
 }
 
 void loop() {
-  int valorRojo = analogRead(A0);
-  int valorVerde = analogRead(A1);
-  int valorAzul = analogRead(A2);
-
-  int intensidadRojo = map(valorRojo, 0, 1023, 0, 255);
-  int intensidadVerde = map(valorVerde, 0, 1023, 0, 255);
-  int intensidadAzul = map(valorAzul, 0, 1023, 0, 255);
+  int intensidadRojo = map(analogRead(A0), 0, 1023, 0, 255);
+  int intensidadVerde = map(analogRead(A1), 0, 1023, 0, 255);
+  int intensidadAzul = map(analogRead(A2), 0, 1023, 0, 255);
 
   analogWrite(3, intensidadRojo);
   analogWrite(6, intensidadVerde);
