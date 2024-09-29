@@ -22,5 +22,5 @@
 <p>Formato de color RGB ( 255 ; 255 ; 255 ), donde cada parte representa los byte de cada columna de color.<br>
 En total un led RGB puede producir aprox 16.000.000 de colores.</p>
 <h2 id="comentarios">COMENTARIOS:</h2>
-<p>Nose si esta del todo bien ya que al ejecutarlo me genera dudas de si esta bien resuelto ya que no muestra muchos colores.</p>
+<p>–</p>
 
