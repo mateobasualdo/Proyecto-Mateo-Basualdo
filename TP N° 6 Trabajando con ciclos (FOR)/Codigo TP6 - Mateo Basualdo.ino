@@ -2,21 +2,28 @@
 #define LED_G 10
 #define LED_B 11
 
+#define LED_RGB(rojo, verde, azul) \
+  analogWrite(LED_R, rojo); \
+  analogWrite(LED_G, verde); \
+  analogWrite(LED_B, azul); \
+  Serial.print(" Rojo: "); Serial.print(rojo); \
+  Serial.print(" Verde: "); Serial.print(verde); \
+  Serial.print(" Azul: "); Serial.println(azul);
+
 void setup() {
   pinMode(LED_R, OUTPUT);
-  pinMode(LED_G, OUTPUT);
   pinMode(LED_B, OUTPUT);
+  pinMode(LED_G, OUTPUT);
+  Serial.begin(9600);
 }
 
 void loop() {
-  for (int red = 0; red <= 255; red++) {
-    for (int green = 0; green <= 255; green++) {
-      for (int blue = 0; blue <= 255; blue++) {
-        analogWrite(LED_R, red);
-        analogWrite(LED_G, green);
-        analogWrite(LED_B, blue);
-        delay(1);
-      }
+  for (int rojo = 0; rojo <= 255; rojo += 5) {
+    for (int verde = 0; verde <= 255; verde += 5) {
+      for (int azul = 0; azul <= 255; azul += 5) {
+        LED_RGB(rojo, verde, azul);
+        delay(10);
     }
   }
+ }
 }
